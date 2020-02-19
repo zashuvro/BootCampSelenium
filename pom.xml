@@ -142,7 +142,7 @@
                     <version>3.0.0-M4</version>
                     <configuration>
                         <includes>
-                            <include>C:\Users\mdshu\Downloads\Bootcamp2020Selenium\LesKodeIt\src\test\resources\Runnerfile.xml</include>
+                            <include>testhomepage.package</include>
                         </includes>
                         <suiteXmlFiles>
 <!--                            <suiteXmlFiles>src/test/resources/Runnerfile.xml</suiteXmlFiles>-->
