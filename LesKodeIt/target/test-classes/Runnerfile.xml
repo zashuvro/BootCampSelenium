@@ -15,7 +15,7 @@
     <parameter name="url" value="https://learn.letskodeit.com/"/>
     <test name="Letskodeit Home">
         <classes>
-            <class name="testhomepage.TestHomepage"/>
+            <class name="testhomepage.TestHomepage"></class>
 
         </classes>
 
