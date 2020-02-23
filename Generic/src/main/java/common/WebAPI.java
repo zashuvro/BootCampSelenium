@@ -110,7 +110,7 @@ public class WebAPI {
     @BeforeMethod
     public void setUp(@Optional("false") boolean useCloudEnv, @Optional("false") String cloudEnvName,
                       @Optional("OS X") String os, @Optional("10") String os_version, @Optional("chrome-options") String browserName, @Optional("34")
-                              String browserVersion, @Optional("https://google.com/") String url) throws IOException {
+                              String browserVersion, @Optional("https://learn.letskodeit.com//") String url) throws IOException {
         //System.setProperty("webdriver.chrome.driver", "/Users/peoplentech/eclipse-workspace-March2018/SeleniumProject1/driver/chromedriver");
         if (useCloudEnv == true) {
             if (cloudEnvName.equalsIgnoreCase("browserstack")) {
@@ -366,9 +366,16 @@ public class WebAPI {
         return list;
     }
 
+
     public static List<WebElement> getListOfWebElementsByXpath(String locator) {
-        List<WebElement> list = new ArrayList<WebElement>();
+        List<WebElement> list = new ArrayList<>();
+        List<String > element =new ArrayList<>();
         list = driver.findElements(By.xpath(locator));
+        for (int i=0; i<list.size(); i++){
+            element.add(list.get(i).getText());
+        }
+        System.out.println("+++++++++++++++++++");
+        System.out.println(element);
         return list;
     }
 

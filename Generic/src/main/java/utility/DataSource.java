@@ -48,7 +48,7 @@ public class DataSource {
     public static List<String> getItemsListFromExcel(String filePath) throws Exception, IOException, SQLException, ClassNotFoundException {
         //List<String> list = new ArrayList<String>(); ../Generic/browser-driver/chromedriver
         String path = System.getProperty(filePath);
-        String[] myStringArray = dataReader.fileReader2(path, 0);
+        String[] myStringArray = dataReader.fileReader2(path, 1);
         for (int i = 1; i < myStringArray.length; i++)
             System.out.print(myStringArray[i] + " ");
         ArrayList<String> list = new ArrayList<String>();

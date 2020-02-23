@@ -5,9 +5,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
 public class TestHomepage extends HomePage {
-    public static  HomePage hp;
 
-    public static void getInItElements(){ hp=PageFactory.initElements(driver,HomePage.class); }
+    public static void getInItElements(){ PageFactory.initElements(driver,HomePage.class); }
     @Test (priority = 1)
     public static void testPracticeButton() throws InterruptedException {
         getInItElements();
@@ -54,7 +53,7 @@ public class TestHomepage extends HomePage {
     }
 
     @Test(priority = 6)
-    public static void clickOnCheckButton() throws InterruptedException {
+    public static void clickOnCheckButtonBMW() throws InterruptedException {
         getInItElements();
         clickPracticeButton();
         sleepFor(2);
@@ -64,7 +63,7 @@ public class TestHomepage extends HomePage {
     }
 
     @Test(priority = 7)
-    public static void newWindowOpen() throws InterruptedException {
+    public static void testNewWindowOpen() throws InterruptedException {
         getInItElements();
         clickPracticeButton();
         sleepFor(2);
@@ -74,7 +73,7 @@ public class TestHomepage extends HomePage {
     }
 
     @Test(priority = 8)
-    public static void newWindowOpen1() throws InterruptedException {
+    public static void testNewBrowserTabOpen() throws InterruptedException {
         getInItElements();
         clickPracticeButton();
         sleepFor(2);
@@ -89,9 +88,6 @@ public class TestHomepage extends HomePage {
         clickPracticeButton();
         sleepFor(2);
         searchBoxSend();
-        for (int i = 0;i<namelist().size();i++){
-            System.out.println(namelist());
-        }
         alertNewHandle();
         sleepFor(2);
         okAlert();
@@ -99,7 +95,7 @@ public class TestHomepage extends HomePage {
     }
 
     @Test(priority = 10)
-    public static void alertHandleCancle() throws InterruptedException {
+    public static void alertHandleCancel() throws InterruptedException {
         getInItElements();
         clickPracticeButton();
         sleepFor(2);
@@ -108,23 +104,36 @@ public class TestHomepage extends HomePage {
         cancelAlert();
     }
     @Test(priority = 11)
-    public static void getTable() throws InterruptedException {
+    public static void testGetTable() throws InterruptedException {
         getInItElements();
         clickPracticeButton();
         sleepFor(2);
-        scrollUpDown(2500);
+        scrollToWebElement(webElemetTable);
         getListOfWebElementsByXpath(webElemetTable);
         sleepFor(2);
 
     }
     @Test(priority = 12)
-    public void testiFrame() {
+    public void testMouseHover() throws InterruptedException {
         getInItElements();
         clickPracticeButton();
-        scrollUpDown(2500);
-        iframeHandle(hp.iFrameName);
-        hp.useSearchbar("python");
-        hp.clearSearchBar();
+        sleepFor(1);
+        //scrollToWebElement(webElemetMouseHover);
+        setMouseHover();
+        sleepFor(2);
+    }
+    @Test(priority = 13)
+    public void testIFrame() throws InterruptedException {
+        getInItElements();
+        clickPracticeButton();
+        sleepFor(2);
+        scrollToWebElement(webElemetIframeName);
+        sleepFor(2);
+        iframeHandle(iFrameName);
+        useSearchbar("PNT");
+        sleepFor(2);
+        clearSearchBar();
+        sleepFor(1);
     }
 
 }

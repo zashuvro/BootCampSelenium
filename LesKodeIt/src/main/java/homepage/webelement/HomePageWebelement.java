@@ -18,5 +18,6 @@ public class HomePageWebelement extends WebAPI {
     public static final String webElemetAlert = "//input[@id='alertbtn']";
     public static final String webElemetTable = "//table[@id='product']";
     public static final String webElemetIframeSearchBar = "//input[@id='search-courses']";
-    public static final String webElemetIframeName = "iframe-name";
+    public static final String webElemetMouseHover = "//button[@id='mousehover']";
+    public static final String webElemetIframeName = "//iframe[@id='courses-iframe']";
 }

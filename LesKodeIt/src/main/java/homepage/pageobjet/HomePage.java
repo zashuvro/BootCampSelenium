@@ -94,33 +94,25 @@ public class HomePage extends HomePageWebelement {
 
     public static void searchBoxSendValue(List<String> list) {
         for (String ele: list) {
-            searchBox.sendKeys(ele);
-        }
-
+            searchBox.sendKeys(ele); }
     }
 
-    public static List<String> namelist() {
-        List<String> list = new ArrayList<>();
-        list.add("Quazi");
-        list.add("Shuvro");
-        list.add("Zahid");
-        return list;
-    }
     @FindBy(xpath = "//div[@id='navbar']")
     public static WebElement iFrame;
-
     @FindBy(xpath = webElemetIframeSearchBar)
-    WebElement iFrameSearchBar;
+    static WebElement  iFrameSearchBar;
 
-    @FindBy(name = webElemetIframeName)
+    @FindBy(xpath = webElemetIframeName)
     public static WebElement iFrameName;
-    public void useSearchbar(String info){
+    public static void useSearchbar(String info){
         iFrameSearchBar.sendKeys(info, Keys.ENTER);
     }
-    public void clearSearchBar(){
+    public static void clearSearchBar(){
         iFrameSearchBar.clear();
     }
 
+    @FindBy (xpath = webElemetMouseHover)public static WebElement mouseHover;
+    public static void setMouseHover(){ mouseHoverByXpath(webElemetMouseHover);}
 
 
 

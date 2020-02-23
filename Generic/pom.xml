@@ -92,6 +92,10 @@
             <!--<scope>test</scope>-->
         </dependency>
         <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+        </dependency>
 
 
 
