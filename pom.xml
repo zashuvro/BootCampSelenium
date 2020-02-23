@@ -12,6 +12,7 @@
         <module>Generic</module>
         <module>LesKodeIt</module>
         <module>Google</module>
+        <module>JQuery</module>
     </modules>
 
         <properties>
