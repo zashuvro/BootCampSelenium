@@ -1,21 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="LetsKodeIt Automation Script" parallel="false">
+<suite name="LetsKodeIT Automation Script">
 
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
     <!--<parameter name="cloudEnvName" value="saucelab"/>-->
     <parameter name="os" value="windows"/>
-    <!--<parameter name="os" value="OS X"/>-->
+    <!--    <parameter name="os" value="mac"/>-->
+    <!--    <parameter name="os_version" value="10"/>-->
     <parameter name="os_version" value="10"/>
-    <!--<parameter name="os_version" value="Sierra"/>-->
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="79"/>
     <parameter name="url" value="https://learn.letskodeit.com/"/>
-    <test name="Letskodeit Home">
+    <!--    parameter name="url" value="https://learn.letskodeit.com/p/practice"/>-->
+    <test name="LetsKodeIt Home">
         <classes>
-            <class name="testhomepage.TestHomepage"></class>
+            <class name="testhomepage.TestHomepage"/>
 
         </classes>
 

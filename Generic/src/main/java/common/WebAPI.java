@@ -127,7 +127,7 @@ public class WebAPI {
         driver.manage().window().maximize();
     }
 
-    public WebDriver getLocalDriver(   @Optional("windows")    String OS, String browserName) {
+    public static WebDriver getLocalDriver(@Optional("windows") String OS, String browserName) {
         if (browserName.equalsIgnoreCase("chrome")) {
             if (OS.equalsIgnoreCase("OS X")) {
                 System.setProperty("webdriver.chrome.driver", "../Generic/BrowserDriver/Windows/chromedriver.exe");

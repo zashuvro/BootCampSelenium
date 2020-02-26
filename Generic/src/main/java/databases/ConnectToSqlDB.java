@@ -208,7 +208,7 @@ public class ConnectToSqlDB {
         User user = null;
         try{
             Connection conn = connectToSqlDatabase();
-            String query = "SELECT * FROM Students";
+            String query = "SELECT * FROM shuvro";
             // create the java statement
             Statement st = conn.createStatement();
             // execute the query, and get a java resultset
@@ -233,9 +233,10 @@ public class ConnectToSqlDB {
     }
 
     public static void main(String[] args)throws IOException, SQLException, ClassNotFoundException {
-        List<User> list = readUserProfileFromSqlTable();
-        for(User user:list){
-            System.out.println(user.getStName() + " " + user.getStID()+ " " + user.getStDOB());
-        }
+//        List<User> list = readUserProfileFromSqlTable();
+//        for(User user:list){
+//            System.out.println(user.getStName() + " " + user.getStID()+ " " + user.getStDOB());
+//        }
+        connectToSqlDatabase();
     }
 }
